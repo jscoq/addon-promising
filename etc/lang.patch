@@ -1,0 +1,39 @@
+diff --git a/src/lang/Configuration.v b/src/lang/Configuration.v
+index d083e76..df62cb9 100644
+--- a/src/lang/Configuration.v
++++ b/src/lang/Configuration.v
+@@ -32,6 +32,11 @@ Inductive opt E T (step: forall (e:option E) (tid:Ident.t) (c1 c2:T), Prop):
+ .
+ Hint Constructors opt.
+ 
++Arguments Language.syntax {E}.
++Arguments Language.init {E}.
++Arguments Language.is_terminal {E}.
++Arguments projT1 {A P}.
++Arguments projT2 {A P}.
+ 
+ Module Threads.
+   Definition syntax := IdentMap.t {lang:language & lang.(Language.syntax)}.
+diff --git a/src/lang/Thread.v b/src/lang/Thread.v
+index 5a095f8..183193b 100644
+--- a/src/lang/Thread.v
++++ b/src/lang/Thread.v
+@@ -250,7 +250,7 @@ Module Local.
+ 
+   Inductive program_step: forall (e:ThreadEvent.t) lc1 sc1 mem1 lc2 sc2 mem2, Prop :=
+   | step_silent
+-      lc1 sc1 mem1:
++      (lc1:t) (sc1:TimeMap.t) (mem1: Memory.t):
+       program_step ThreadEvent.silent lc1 sc1 mem1 lc1 sc1 mem1
+   | step_read
+       lc1 sc1 mem1
+@@ -496,6 +496,9 @@ Module Local.
+ End Local.
+ 
+ 
++Arguments Language.state {E}.
++Arguments Language.step {E}.
++
+ Module Thread.
+   Section Thread.
+     Variable (lang:language).

@@ -1,0 +1,13 @@
+(coq.theory
+ (name promising)
+ (package coq-promising-coq)
+ (flags -w -notation-overridden
+        -w -implicit-core-hint-db
+        -w -omega-is-deprecated))
+
+(copy_files ../src/lang/*.v)
+(copy_files ../src/drf/*.v)
+(copy_files ../src/prop/*.v)
+(copy_files ../src/opt/*.v)
+(copy_files ../src/invariant/*.v)
+(copy_files ../src/while/*.v)
