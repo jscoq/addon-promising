@@ -1,0 +1,11 @@
+{
+    "name": "@jscoq/promising-coq",
+    "description": "SNU's promising-coq for jsCoq 0.12",
+    "version": "0.12.0",
+    "files": ["README.md", "coq-pkgs"],    
+    "repository": {
+        "type": "git",
+        "url": "github:jscoq/addon-promising-coq"
+    },
+    "license": "AGPL-3.0-or-later"
+}
