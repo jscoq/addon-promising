@@ -5,7 +5,10 @@
   (package coq-promising-coq))
  (action
   (run %{env:pkgtool=jscoq} build workdir
-       --package coq-pkgs/promising-coq.coq-pkg)))
+                    --load ../snu-sflib/coq-pkgs/snu-sflib.coq-pkg
+                    --load ../paco/coq-pkgs/paco.coq-pkg
+                    --load ../promising-lib/coq-pkgs/promising-lib.coq-pkg
+                    --package coq-pkgs/promising-coq.coq-pkg)))
 
 (alias
  (name all)
