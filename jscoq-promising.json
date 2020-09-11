@@ -1,0 +1,17 @@
+{
+    "rootdir": "workdir",
+    "builddir": "coq-pkgs",
+    "bundle": "promising",
+    "projects": {
+        "promising-lib": {
+            "promising-lib/src": {
+                "prefix": "PromisingLib"
+            }
+        },
+        "promising-coq": {
+            "promising-coq/promising": {
+                "prefix": "promising"
+            }
+        }
+    }
+}

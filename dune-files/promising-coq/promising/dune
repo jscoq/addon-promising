@@ -1,10 +1,13 @@
 (coq.theory
  (name promising)
  (package coq-promising-coq)
+ (theories PromisingLib)
  (flags -w -notation-overridden
         -w -implicit-core-hint-db
         -w -omega-is-deprecated))
 
+; This is the only way to map all subdirs to logical
+; prefix `promising.` in Dune.
 (copy_files ../src/lang/*.v)
 (copy_files ../src/drf/*.v)
 (copy_files ../src/prop/*.v)
