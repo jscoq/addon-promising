@@ -6,7 +6,7 @@
   (package coq-promising-coq)
   (:json jscoq-promising.json))
  (action
-  (run %{env:pkgtool=jscoq} build %{json}
+  (run npx %{env:pkgtool=jscoq} build %{json}
                     --load ../snu-sflib/coq-pkgs/snu-sflib.coq-pkg
                     --load ../paco/coq-pkgs/paco.coq-pkg)))
 
