@@ -13,9 +13,9 @@ get: $(WORKDIR)
 
 $(WORKDIR):
 	git clone --depth=1 -b $(LIB_TAG) $(LIB_REPO) $(WORKDIR)/promising-lib
-	( cd $(WORKDIR)/promising-lib && git apply ../../etc/lib.patch)
+	( cd $(WORKDIR)/promising-lib && git apply ../../etc/lib.patch )
 	git clone --depth=1 -b $(TAG) $(REPO) $(WORKDIR)/promising-coq
-	( cd $(WORKDIR)/promising-coq && git apply ../../etc/{drf,lang,opt,while}.patch)
+	( cd $(WORKDIR)/promising-coq && git apply ${foreach m, drf lang opt while,../../etc/$m.patch} )
 	cp -r dune-files/* $(WORKDIR)/
 
 install:
