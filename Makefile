@@ -1,7 +1,7 @@
 REPO = https://github.com/snu-sf/promising-coq.git
-TAG = paco4.0.0
+TAG = 8.13
 LIB_REPO = https://github.com/snu-sf/promising-lib.git
-LIB_TAG = master
+LIB_TAG = 8.13
 WORKDIR = workdir
 
 .PHONY: all get
@@ -13,9 +13,7 @@ get: $(WORKDIR)
 
 $(WORKDIR):
 	git clone --depth=1 -b $(LIB_TAG) $(LIB_REPO) $(WORKDIR)/promising-lib
-	( cd $(WORKDIR)/promising-lib && git apply ../../etc/lib.patch )
 	git clone --depth=1 -b $(TAG) $(REPO) $(WORKDIR)/promising-coq
-	( cd $(WORKDIR)/promising-coq && git apply ${foreach m, drf lang opt while,../../etc/$m.patch} )
 	cp -r dune-files/* $(WORKDIR)/
 
 install:
