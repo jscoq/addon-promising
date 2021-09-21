@@ -14,6 +14,8 @@ get: $(WORKDIR)
 $(WORKDIR):
 	git clone --depth=1 -b $(LIB_TAG) $(LIB_REPO) $(WORKDIR)/promising-lib
 	git clone --depth=1 -b $(TAG) $(REPO) $(WORKDIR)/promising-coq
+	( cd $(WORKDIR)/promising-lib && git apply ../../etc/nomega.lib.patch )
+	( cd $(WORKDIR)/promising-coq && git apply ../../etc/nomega.coq.patch )
 	cp -r dune-files/* $(WORKDIR)/
 
 install:

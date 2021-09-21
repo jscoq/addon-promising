@@ -1,0 +1,289 @@
+diff --git a/src/drf/DRFBase.v b/src/drf/DRFBase.v
+index 468cecd..07e916b 100644
+--- a/src/drf/DRFBase.v
++++ b/src/drf/DRFBase.v
+@@ -1,4 +1,3 @@
+-Require Import Omega.
+ Require Import RelationClasses.
+ 
+ From sflib Require Import sflib.
+diff --git a/src/drf/DRF_PF.v b/src/drf/DRF_PF.v
+index 88e614e..f0151dc 100644
+--- a/src/drf/DRF_PF.v
++++ b/src/drf/DRF_PF.v
+@@ -1,4 +1,3 @@
+-Require Import Omega.
+ Require Import RelationClasses.
+ 
+ From Paco Require Import paco.
+diff --git a/src/drf/Fulfilled.v b/src/drf/Fulfilled.v
+index c6841ef..1864f1f 100644
+--- a/src/drf/Fulfilled.v
++++ b/src/drf/Fulfilled.v
+@@ -1,4 +1,3 @@
+-Require Import Omega.
+ Require Import RelationClasses.
+ 
+ From sflib Require Import sflib.
+diff --git a/src/drf/Lift.v b/src/drf/Lift.v
+index 50c4e46..82fc629 100644
+--- a/src/drf/Lift.v
++++ b/src/drf/Lift.v
+@@ -1,4 +1,3 @@
+-Require Import Omega.
+ Require Import RelationClasses.
+ 
+ From sflib Require Import sflib.
+diff --git a/src/drf/OrdStep.v b/src/drf/OrdStep.v
+index 5e1267c..798fbec 100644
+--- a/src/drf/OrdStep.v
++++ b/src/drf/OrdStep.v
+@@ -1,4 +1,3 @@
+-Require Import Omega.
+ Require Import RelationClasses.
+ 
+ From sflib Require Import sflib.
+diff --git a/src/drf/PIStepPreservation.v b/src/drf/PIStepPreservation.v
+index 0122d0a..3491624 100644
+--- a/src/drf/PIStepPreservation.v
++++ b/src/drf/PIStepPreservation.v
+@@ -1,4 +1,3 @@
+-Require Import Omega.
+ Require Import RelationClasses.
+ 
+ From sflib Require Import sflib.
+@@ -641,8 +640,8 @@ Proof.
+     eauto.
+   }
+ Unshelve.
+-{ exact xH. }
+-{ exact xH. }
++{ assumption. }
++{ assumption. }
+ Qed.
+ 
+ 
+diff --git a/src/drf/PIStepProgress.v b/src/drf/PIStepProgress.v
+index f01da8e..c1b8496 100644
+--- a/src/drf/PIStepProgress.v
++++ b/src/drf/PIStepProgress.v
+@@ -1,4 +1,3 @@
+-Require Import Omega.
+ Require Import RelationClasses.
+ 
+ From sflib Require Import sflib.
+@@ -302,14 +301,14 @@ Proof.
+ Unshelve.
+   { exact Time.bot. }
+   { exact true. }
+-  { exact xH. }
+-  { exact xH. }
+-  { exact xH. }
+-  { exact xH. }
+-  { exact xH. }
+-  { exact xH. }
+-  { exact xH. }
+-  { exact xH. }
++  { assumption. }
++  { assumption. }
++  { assumption. }
++  { assumption. }
++  { assumption. }
++  { assumption. }
++  { assumption. }
++  { assumption. }
+ Qed.
+ 
+ Lemma small_step_evt_to_true
+diff --git a/src/drf/PromiseConsistent.v b/src/drf/PromiseConsistent.v
+index 735032d..192a48a 100644
+--- a/src/drf/PromiseConsistent.v
++++ b/src/drf/PromiseConsistent.v
+@@ -1,4 +1,3 @@
+-Require Import Omega.
+ Require Import RelationClasses.
+ 
+ From sflib Require Import sflib.
+diff --git a/src/drf/Race.v b/src/drf/Race.v
+index 5bf5244..5e71ad3 100644
+--- a/src/drf/Race.v
++++ b/src/drf/Race.v
+@@ -1,4 +1,3 @@
+-Require Import Omega.
+ Require Import RelationClasses.
+ 
+ From sflib Require Import sflib.
+diff --git a/src/drf/SmallStep.v b/src/drf/SmallStep.v
+index a3da5df..56e1415 100644
+--- a/src/drf/SmallStep.v
++++ b/src/drf/SmallStep.v
+@@ -1,4 +1,3 @@
+-Require Import Omega.
+ Require Import RelationClasses.
+ 
+ From sflib Require Import sflib.
+diff --git a/src/invariant/Invariant.v b/src/invariant/Invariant.v
+index 91ca205..fd9f7c1 100644
+--- a/src/invariant/Invariant.v
++++ b/src/invariant/Invariant.v
+@@ -1,4 +1,3 @@
+-Require Import Omega.
+ Require Import RelationClasses.
+ 
+ From sflib Require Import sflib.
+diff --git a/src/lang/Cell.v b/src/lang/Cell.v
+index 010318b..685a47d 100644
+--- a/src/lang/Cell.v
++++ b/src/lang/Cell.v
+@@ -1,4 +1,3 @@
+-Require Import Omega.
+ Require Import RelationClasses.
+ 
+ From sflib Require Import sflib.
+diff --git a/src/lang/Configuration.v b/src/lang/Configuration.v
+index a0d65d4..d98b551 100644
+--- a/src/lang/Configuration.v
++++ b/src/lang/Configuration.v
+@@ -1,4 +1,3 @@
+-Require Import Omega.
+ Require Import RelationClasses.
+ 
+ From sflib Require Import sflib.
+diff --git a/src/lang/Event.v b/src/lang/Event.v
+index 0e44419..4f5dcb5 100644
+--- a/src/lang/Event.v
++++ b/src/lang/Event.v
+@@ -2,7 +2,6 @@ Require Import List.
+ Require Import PeanoNat.
+ Require Import Orders.
+ Require Import MSetList.
+-Require Import Omega.
+ 
+ From sflib Require Import sflib.
+ 
+diff --git a/src/lang/Memory.v b/src/lang/Memory.v
+index 39cce65..f0af35f 100644
+--- a/src/lang/Memory.v
++++ b/src/lang/Memory.v
+@@ -1,4 +1,3 @@
+-Require Import Omega.
+ Require Import RelationClasses.
+ 
+ From sflib Require Import sflib.
+diff --git a/src/lang/MemoryFacts.v b/src/lang/MemoryFacts.v
+index 1dd58e0..1f9ed97 100644
+--- a/src/lang/MemoryFacts.v
++++ b/src/lang/MemoryFacts.v
+@@ -1,4 +1,3 @@
+-Require Import Omega.
+ Require Import RelationClasses.
+ 
+ From sflib Require Import sflib.
+diff --git a/src/lang/Progress.v b/src/lang/Progress.v
+index 60625e9..53811e3 100644
+--- a/src/lang/Progress.v
++++ b/src/lang/Progress.v
+@@ -1,4 +1,3 @@
+-Require Import Omega.
+ Require Import RelationClasses.
+ 
+ From sflib Require Import sflib.
+diff --git a/src/lang/TView.v b/src/lang/TView.v
+index 0823d23..fdb0388 100644
+--- a/src/lang/TView.v
++++ b/src/lang/TView.v
+@@ -1,4 +1,3 @@
+-Require Import Omega.
+ Require Import RelationClasses.
+ 
+ From sflib Require Import sflib.
+diff --git a/src/lang/Thread.v b/src/lang/Thread.v
+index 052e5c7..a43b1c8 100644
+--- a/src/lang/Thread.v
++++ b/src/lang/Thread.v
+@@ -1,4 +1,3 @@
+-Require Import Omega.
+ Require Import Bool.
+ Require Import RelationClasses.
+ 
+diff --git a/src/lang/View.v b/src/lang/View.v
+index 342eaad..8b71bc6 100644
+--- a/src/lang/View.v
++++ b/src/lang/View.v
+@@ -1,4 +1,3 @@
+-Require Import Omega.
+ Require Import RelationClasses.
+ 
+ From sflib Require Import sflib.
+diff --git a/src/prop/MemoryMerge.v b/src/prop/MemoryMerge.v
+index e92671f..0563a95 100644
+--- a/src/prop/MemoryMerge.v
++++ b/src/prop/MemoryMerge.v
+@@ -1,4 +1,3 @@
+-Require Import Omega.
+ Require Import RelationClasses.
+ 
+ From sflib Require Import sflib.
+diff --git a/src/prop/MemoryRel.v b/src/prop/MemoryRel.v
+index 256ac4f..8171f87 100644
+--- a/src/prop/MemoryRel.v
++++ b/src/prop/MemoryRel.v
+@@ -1,4 +1,3 @@
+-Require Import Omega.
+ Require Import RelationClasses.
+ 
+ From sflib Require Import sflib.
+diff --git a/src/prop/MemoryReorder.v b/src/prop/MemoryReorder.v
+index bdf8605..bc41cc8 100644
+--- a/src/prop/MemoryReorder.v
++++ b/src/prop/MemoryReorder.v
+@@ -1,4 +1,3 @@
+-Require Import Omega.
+ Require Import RelationClasses.
+ 
+ From sflib Require Import sflib.
+diff --git a/src/prop/MemorySplit.v b/src/prop/MemorySplit.v
+index 3d00165..1b2a620 100644
+--- a/src/prop/MemorySplit.v
++++ b/src/prop/MemorySplit.v
+@@ -1,4 +1,3 @@
+-Require Import Omega.
+ Require Import RelationClasses.
+ 
+ From sflib Require Import sflib.
+diff --git a/src/prop/PFConsistent.v b/src/prop/PFConsistent.v
+index 8ff6abd..f0f5480 100644
+--- a/src/prop/PFConsistent.v
++++ b/src/prop/PFConsistent.v
+@@ -1,4 +1,3 @@
+-Require Import Omega.
+ Require Import RelationClasses.
+ 
+ From sflib Require Import sflib.
+diff --git a/src/prop/ReorderPromise.v b/src/prop/ReorderPromise.v
+index 24aa320..1cf7911 100644
+--- a/src/prop/ReorderPromise.v
++++ b/src/prop/ReorderPromise.v
+@@ -1,4 +1,3 @@
+-Require Import Omega.
+ Require Import RelationClasses.
+ 
+ From sflib Require Import sflib.
+diff --git a/src/prop/ReorderPromiseDiff.v b/src/prop/ReorderPromiseDiff.v
+index 3115c89..eb6c4d8 100644
+--- a/src/prop/ReorderPromiseDiff.v
++++ b/src/prop/ReorderPromiseDiff.v
+@@ -1,4 +1,3 @@
+-Require Import Omega.
+ Require Import RelationClasses.
+ 
+ From sflib Require Import sflib.
+diff --git a/src/prop/ReorderPromiseSame.v b/src/prop/ReorderPromiseSame.v
+index 3bf34bd..d394caa 100644
+--- a/src/prop/ReorderPromiseSame.v
++++ b/src/prop/ReorderPromiseSame.v
+@@ -1,4 +1,3 @@
+-Require Import Omega.
+ Require Import RelationClasses.
+ Require Import Bool.
+ 

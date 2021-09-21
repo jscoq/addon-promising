@@ -1,0 +1,10 @@
+diff --git a/src/Loc.v b/src/Loc.v
+index 11fd402..7d8d50c 100644
+--- a/src/Loc.v
++++ b/src/Loc.v
+@@ -1,5 +1,4 @@
+ Require Import Orders.
+-Require Import Omega.
+ Require Import Coq.Logic.PropExtensionality.
+ 
+ From sflib Require Import sflib.

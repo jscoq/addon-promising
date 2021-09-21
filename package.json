@@ -1,6 +1,6 @@
 {
     "name": "@jscoq/promising",
-    "description": "SNU's promising-coq for jsCoq 0.13",
+    "description": "SNU's promising-coq for jsCoq",
     "version": "0.13.0",
     "files": ["README.md", "coq-pkgs"],    
     "repository": {
