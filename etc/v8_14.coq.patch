@@ -1,0 +1,16 @@
+diff --git a/src/while/Syntax.v b/src/while/Syntax.v
+index 8b91df9..122d75c 100644
+--- a/src/while/Syntax.v
++++ b/src/while/Syntax.v
+@@ -168,9 +168,10 @@ Module SyntaxNotations.
+   Delimit Scope string_scope with string.
+   Open Scope string_scope.
+ 
++(*
+   Notation "'%r' var" := (Reg.of_string var) (at level 41).
+   Notation "'%l' var" := (Loc.of_string var) (at level 41).
+-
++*)
+   Notation "'pln'" := (Ordering.plain) (at level 41).
+   Notation "'rlx'" := (Ordering.relaxed) (at level 41).
+   Notation "'ar'" := (Ordering.acqrel) (at level 41).
