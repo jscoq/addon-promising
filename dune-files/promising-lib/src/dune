@@ -1,4 +1,0 @@
-(coq.theory
- (name PromisingLib)
- (package coq-promising-lib)
- (flags -w -deprecated -w -notation-overridden -w -non-recursive))
